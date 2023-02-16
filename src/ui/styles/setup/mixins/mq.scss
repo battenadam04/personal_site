@@ -1,0 +1,42 @@
+
+$mq-breakpoints: (
+        mobile: 480px,
+        tablet: 768px,
+        laptop: 1024px,
+        desktop: 1440px,
+        ultra: 1800px
+);
+
+$mq-breakpoints: () !default;
+
+// Mixin used for media query, above specified point.
+// Use as: @include above(tablet);
+@mixin above( $value ) {
+  $breakpoint: map-get( $mq-breakpoints, $value );
+
+  @if ( $breakpoint != null ) {
+    $value: $breakpoint;
+  }
+
+  @if ( unitless( $value ) == false ) {
+    @media only screen and (min-width: $value) {
+      @content;
+    }
+  }
+}
+
+// Mixin used for media query, below specified point.
+// Use as: @include below(tablet);
+@mixin below( $value ) {
+  $breakpoint: map-get( $mq-breakpoints, $value );
+
+  @if ( $breakpoint != null ) {
+    $value: $breakpoint;
+  }
+
+  @if ( unitless( $value ) == false ) {
+    @media not screen and (min-width: $value) {
+      @content;
+    }
+  }
+}

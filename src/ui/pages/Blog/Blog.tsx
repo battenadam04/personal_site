@@ -1,8 +1,7 @@
 import * as React from 'react';
-import {BootstrapColumn, BootstrapRow} from "../Utils/BootstrapImportsUtils";
+import {BootstrapColumn, BootstrapRow} from "../../Utils/BootstrapImportsUtils";
 
-
-export class ProjectsPage extends React.Component<any, any> {
+export class BlogPage extends React.Component<any, any> {
 
 
     public render() {
@@ -11,9 +10,9 @@ export class ProjectsPage extends React.Component<any, any> {
 
         return (
             <div>
+                <h2>Blog</h2>
                 <BootstrapRow>
                     <BootstrapColumn sm={2}>
-                        <h2>Projects</h2>
                     </BootstrapColumn>
                 </BootstrapRow>
             </div>
@@ -23,4 +22,4 @@ export class ProjectsPage extends React.Component<any, any> {
 }
 
 
-export default ProjectsPage;
+export default BlogPage;
