@@ -1,0 +1,16 @@
+@import "../../styles/setup/mixins/mq";
+
+.Header {
+  background: url("../../../../public/images/logo.png") no-repeat;
+  background-position: 2%;
+  background-size: 40px;
+  background-color: white;
+  min-height: 80px;
+  height:80px;
+  position: fixed;
+  left:0px;
+  right: 0px;
+  top:0px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-bottom-radius: 5px;
+}
