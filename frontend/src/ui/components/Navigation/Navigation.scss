@@ -1,0 +1,194 @@
+@import "../../styles/setup/mixins/mq";
+
+nav {
+  width: 100%;
+  margin: 0px auto;
+  text-align: center;
+  line-height: 2;
+
+.main-nav {
+  height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+        padding: 0px 20px;
+        margin: 0px 5px;
+        text-decoration: none;
+        left:0px;
+        color:black;
+        font-size: 1.25rem;
+        font-family: "Roboto Slab", sans-serif;
+        cursor: pointer;
+      }
+
+          @include below(tablet) {
+            display: none;
+          }
+}
+
+
+    .active {
+        border-bottom: 2px solid red;
+
+    }
+
+    @include below(tablet) {
+      font-size: 1em;
+    }
+
+
+    .burger-check {
+    		display: none;
+    }
+
+    /*--------------------------------------
+     Sets the actionable area for the burger
+     including a label for usability
+    --------------------------------------*/
+    .burger{
+
+    				width: 600px;
+            		height: auto;
+    		cursor: pointer;
+
+    		span {
+    		    float: right;
+    		}
+    }
+
+    /*--------------------------------------
+     Creates the look of the burger icon
+     using the inner span and pseudo-elements
+    --------------------------------------*/
+    .burger span,
+    .burger span:before,
+    .burger span:after {
+		left: 70%;
+		top: 22px;
+		padding: 0px;
+    		position: absolute;
+    		float: right;
+    		width: 40px;
+    		height: 4px;
+    		background: #333;
+    		border-radius: 0.2em;
+    		display: block;
+
+    		    @include above(mobile) {
+                  left: 85%;
+                }
+    }
+
+    /* Reset the left and create the pseudo-element */
+    .burger span:before,
+    .burger span:after {
+    		content: '';
+    		left: 0;
+    }
+
+    /* Top bar position */
+    .burger span:before {
+    		top: -8px;
+    }
+
+    /* Bottom bar position */
+    .burger span:after {
+    		top: 8px;
+    }
+
+    /* Get rid of more on action (IE9 or higher) */
+    .burger-check:checked + .burger:after {
+    		content: '';
+    }
+    /* Get rid of the middle bar on action (IE9 or higher) */
+
+    .burger-check:checked + .burger span {
+    		height: 0;
+    		width: 0;
+    }
+
+    /* Moves the top and bottom bars to the middle on action (IE9 or higher) */
+    .burger-check:checked + .burger span:before,
+    .burger-check:checked + .burger span:after {
+    		top: 6px;
+    }
+
+    /* Rotates the top bar on action with full browser support (IE9 or higher) */
+    .burger-check:checked + .burger span:before {
+    		-webkit-transform: rotate(225deg);
+    		-ms-transform: rotate(225deg);
+    		transform: rotate(225deg);
+    }
+
+    /* Rotates the bottom bar on action with full browser support (IE9 or higher) */
+    .burger-check:checked + .burger span:after {
+    		-webkit-transform: rotate(-225deg);
+    		-ms-transform: rotate(225deg);
+    		transform: rotate(-225deg);
+    }
+
+
+
+    /*==============================================================================
+     Simple mobile menu opening and closing (IE9 or higher)
+    ==============================================================================*/
+
+        .a-header {
+        		position: relative;
+        		top: 20px;
+        		width: calc(50% - 20px);
+        		margin: 0;
+        		overflow: hidden;
+                display: none;
+                text-align:right;
+
+            @include below(tablet) {
+              display: flex;
+              margin-left: auto;
+              text-align: center;
+
+            }
+        }
+
+
+.a-header .burger-links {
+		background: black;
+		min-width: 100%;
+		margin: 60px 0px 0px 0px;
+}
+    .a-header .burger-links a {
+    		position: relative;
+    		width: 100%;
+    		line-height: 50px;
+    		border: 0px;
+    		height:0;
+    		text-decoration: none;
+            left: 0px;
+            right: 0px;
+    		color: #fff;
+    		display: block;
+    }
+
+
+    .a-header a:hover,
+    .a-header a:active,
+    .a-header a:focus,
+    .a-header a:visited {
+    		text-decoration: none;
+    }
+
+#main-nav:checked ~ .burger-links a {
+		min-height: 40px;
+		margin-bottom: 20px;
+
+}
+
+#main-nav:checked ~ .burger-links  {
+		.active {
+		    border-bottom: 2px solid red;
+		}
+}
+
+}
