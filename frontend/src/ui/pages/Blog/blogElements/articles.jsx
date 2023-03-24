@@ -10,7 +10,7 @@ const AllArticles = () => {
         <div className="uk-container uk-container-large">
           <Query query={ARTICLES_QUERY}>
             {({ data: { articles } }) => {
-            console.log(articles.data)
+            console.log('helloo',articles.data)
               return <Articles articles={articles.data} />;
             }}
           </Query>

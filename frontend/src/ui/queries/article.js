@@ -10,16 +10,7 @@ const ARTICLE_QUERY = gql`
           description
           updatedAt
           createdAt
-          blocks {
-            __typename
-                        ...on ComponentSharedRichText {
-                          body
-                        }
-                        ...on ComponentSharedQuote {
-                          title
-                          body
-                        }
-          }
+          content
           author {
             data {
               attributes {

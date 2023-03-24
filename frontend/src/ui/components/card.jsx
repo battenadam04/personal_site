@@ -7,6 +7,7 @@ const Card = ({ article }) => {
       ? article.attributes.cover.data.attributes.url
       : process.env.REACT_APP_BACKEND_URL +
         article.attributes.cover.data.attributes.url;
+        console.log(article);
   return (
     <Link to={`/blog/article/${article.attributes.slug}`} className="uk-link-reset">
       <div className="uk-card uk-card-muted">
