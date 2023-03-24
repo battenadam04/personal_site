@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c113bb94-8efb-41ea-89b6-f1dabba7b829" name="Changes" comment="" />
+    <list default="true" id="c113bb94-8efb-41ea-89b6-f1dabba7b829" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/api/article/content-types/article/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/api/article/content-types/article/schema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/backend/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootcamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootcamp.pub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/ui/components/card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/components/card.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/ui/containers/HomeContainer.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/ui/containers/article.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/containers/article.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/ui/pages/Blog/blogElements/articles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/pages/Blog/blogElements/articles.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/ui/queries/article.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/queries/article.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,13 +33,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/adambatten/Documents/Personal_Work/personal-app"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/adambatten/Documents/Personal_Work/personal-app&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/frontend/src/ui/components" />

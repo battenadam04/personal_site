@@ -5,13 +5,17 @@ import ReactMarkdown from "react-markdown";
 import Moment from "react-moment";
 
 import ARTICLE_QUERY from "../queries/article";
+import ArticleNav from '../components/articleNav';
 
 const Article = () => {
   let { slug } = useParams();
 
   return (
+  <div>
+  <ArticleNav />
     <Query query={ARTICLE_QUERY} slug={slug}>
       {({ data: { articles } }) => {
+
         if (articles.data.length) {
         console.log(articles);
           const articleData = articles.data[0].attributes;
@@ -45,16 +49,18 @@ const Article = () => {
                     </Moment>
                   </p>
                 </div>
-                  {articleData.blocks.map((block) => {
-                  console.log(block.__typename);
-                    return <ReactMarkdown children={block} />
-                  })}
+                    {/* format images to get correct image path in backend uploads */}
+                  <ReactMarkdown
+                    children={articleData.content}
+                    transformImageUri={uri =>`${process.env.REACT_APP_BACKEND_URL}${uri}`}
+                   />
               </div>
             </div>
           );
         }
       }}
     </Query>
+    </div>
   );
 };
 
